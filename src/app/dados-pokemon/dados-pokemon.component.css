@@ -1,5 +1,8 @@
+.container{
+    margin-bottom: 50px;
+}
+
 h1{
-    font-family: Georgia, 'Times New Roman', Times, serif;
     margin-top: 30px;
     text-align: center;
     color: white;
@@ -7,19 +10,71 @@ h1{
 }
 
 .row{
-    margin-top: 20px;
+    margin-top: 30px;
+
+}
+
+label , .type{
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: white;
+    font-size: 18px;
+    margin-right: 10px;
 }
 
 .type{
     display: inline;
-    padding: 1px 10px;
+    padding: 2px 5px;
     border-radius: 10px;
+    margin: 3px;
+    color: white;
+
 }
 
+
+/* TIPOS */
 .poison{
     background-color: rgb(186, 243, 112);
 }
-
 .fire{
     background-color: rgb(250, 52, 52);
+}
+.grass{
+    background-color: rgb(146, 190, 88);
+}
+.water{
+    background-color: rgb(118, 186, 250);
+}
+
+/* FIM DE TIPOS */
+
+.animation{    
+    text-align: center;  
+}
+
+
+
+.gif-animation{
+    margin: 50px;
+    width: 140px;
+}
+
+.gif-nome{
+    background-color:rgba(153, 147, 147, 0.801);    
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+
+.sombra{
+    width: 150px;
+    height: 30px;
+    background-image: linear-gradient(to bottom, rgba(204, 201, 201,0.6),  rgba(92, 91, 91, 0.6));
+    border-radius: 50%;
+    transform: rotateX(10deg);
+    display: block;
+    margin-top: -70px;
+    margin-left: 60px;
+    position: relative;
+    z-index: -1;
+  
 }

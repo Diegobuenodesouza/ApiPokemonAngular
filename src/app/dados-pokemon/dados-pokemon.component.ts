@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { ApiPokemonService } from '../service/api-pokemon.service';
+import { UtilitarioId } from '../utilitario/utilitarioId';
 
 @Component({
   selector: 'app-dados-pokemon',
@@ -13,7 +14,8 @@ export class DadosPokemonComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private pokemonService: ApiPokemonService    
+    private pokemonService: ApiPokemonService ,
+    private utilitarioId: UtilitarioId  
     ) { }
 
   
@@ -24,6 +26,11 @@ export class DadosPokemonComponent implements OnInit {
         (res) => this.pokemon = res
       )
     } )
+  }
+
+  retornoId(url: string): string{
+    let id = this.utilitarioId.retornoId(url);
+    return id;
   }
 
 }

@@ -9,41 +9,55 @@
         
         
         
-        <div class="col-lg-4"> 
+        <div class="col-lg-3"> 
             <div class="row">
-                <label for="">ID: </label>
+                <label for="">ID: #{{ retornoId(pokemon['forms'][0]['url']) }} </label>
+            </div>  
+            
+            <div class="row">
+                <label for="">Height: {{ pokemon['height']/10 }}0m</label>
+            </div>           
+            
+            <div class="row">
+                <label for="">Weight: {{ pokemon['weight'] }}kg </label>
             </div>           
             
             
             <div class="row">
                 <div class="col-lg-12">
-                    <label >Tipo: </label> 
+                    <label >Type: </label> 
                     <div *ngFor="let type of pokemon['types']; let i=index"  style="display: inline;">                       
                         <p  class="type"
-                         [ngClass]="{'poison': pokemon['types'][i]['type']['name'] == 'poison',
-                        'fire': pokemon['types'][i]['type']['name'] == 'fire'}"                        
-                        
+                        [ngClass]="{
+                            'poison': pokemon['types'][i]['type']['name'] == 'poison',
+                            'fire': pokemon['types'][i]['type']['name'] == 'fire',
+                            'grass': pokemon['types'][i]['type']['name'] == 'grass',
+                            'water': pokemon['types'][i]['type']['name'] == 'water'
+                        }"                       
                         > {{ pokemon['types'][i]['type']['name'] | primeiraMaiuscula }}</p>   
                     </div>  
+                </div>                
+            </div>            
+            
+            
+        </div>
+        
+        
+        <div class="col-lg-6 animation " > 
+            <div class="row">
+                <div class="col-6">
+                    <img class="gif-animation" [src]="pokemon['sprites']['versions']['generation-v']['black-white']['animated']['front_default']" alt="animation-pokemon">
+                    <div class="sombra"></div>
                 </div>
-           
+                <div class="col-6">
+                    <img class="gif-animation" [src]="pokemon['sprites']['versions']['generation-v']['black-white']['animated']['back_default']" alt="animation-pokemon">  
+                    <div class="sombra"></div>
+                </div>
+            </div>
         </div>
-            
-            
-            
-        </div>
         
         
-        <div class="col-lg-4"> //TODO GIF Animation </div>
-        
-        
-        <div class="col-lg-4"> //TODO Mais dados </div>
+        <div class="col-lg-3"> //TODO Mais dados </div>
     </div>
     
 </div>
-
-
-
-
-
-

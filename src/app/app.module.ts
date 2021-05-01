@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PrimeiraMaiusculaPipe } from './utilitario/primeira-maiuscula.pipe';
 import { DadosPokemonComponent } from './dados-pokemon/dados-pokemon.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
+import { UtilitarioId } from './utilitario/utilitarioId';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { PokemonComponent } from './pokemon/pokemon.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [UtilitarioId],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
