@@ -1,0 +1,38 @@
+.cor-fundo{
+    background-color: rgba(255, 25, 25, 0.938);
+    height: 120px;
+}
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8px;
+}
+
+.container{
+    margin-top: 30px;
+}
+
+.col-md-4{
+    padding: 0px;
+}
+
+.form-select{
+    background-color: rgb(250, 93, 93);
+    border-radius: 0px 20px 20px 0px; 
+
+}
+
+.form-select, input{
+    font-size: 18px;   
+    font-weight: 700;;
+}
+
+option{
+    font-weight: 700;
+}
+
+input{
+    border-radius: 20px 0px 0px 20px;
+}

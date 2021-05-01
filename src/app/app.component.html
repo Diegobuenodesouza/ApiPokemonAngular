@@ -1,0 +1,19 @@
+<div class="cor-fundo">
+    <img class="logo" src="../assets/pokeapi.png" alt="">
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 "></div>
+        <div class=" col-md-4 col-sm-12">
+            <input type="text" class="form-control" placeholder="Digite nome do Pokémon">
+        </div>
+        <div class=" col-md-4 col-sm-12">
+            <select class="form-select" >
+                <option disabled selected>Selecione o elemento</option>
+                <option value='{{ tipo}}' *ngFor="let tipo of listaElementos"> {{ tipo }}</option>
+            </select>
+        </div>
+        <div class="col-md-2 "></div>
+    </div>
+</div>
