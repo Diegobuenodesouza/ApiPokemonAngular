@@ -18,4 +18,6 @@ export class ApiPokemonService {
   getNamePokemon(nome : string): Observable<any>{
     return this.http.get(`${this.URL_POKEMON}/${nome}`)
   }  
+
+  
 }

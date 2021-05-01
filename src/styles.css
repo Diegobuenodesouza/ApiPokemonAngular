@@ -1,7 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background-image: url('assets/papelfunddo.png');
+    /* background-image: url('/assets/papelfunddo.png'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+
+.cor-fundo{
+    background-color: rgba(255, 25, 25, 0.801);
+    height: 120px;
+    box-shadow: 0px 0px 10px 2px white;
+}
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8px;
 }
