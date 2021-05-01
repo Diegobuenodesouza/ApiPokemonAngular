@@ -1,5 +1,5 @@
 .cor-fundo{
-    background-color: rgba(255, 25, 25, 0.938);
+    background-color: rgba(255, 25, 25, 0.801);
     height: 120px;
 }
 
@@ -12,27 +12,71 @@
 
 .container{
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .col-md-4{
-    padding: 0px;
-}
-
-.form-select{
-    background-color: rgb(250, 93, 93);
-    border-radius: 0px 20px 20px 0px; 
-
-}
-
-.form-select, input{
-    font-size: 18px;   
-    font-weight: 700;;
-}
-
-option{
-    font-weight: 700;
+    padding: 0px;    
 }
 
 input{
     border-radius: 20px 0px 0px 20px;
+}
+
+.form-select{
+    background-color: rgba(250, 93, 93,0.801);
+    border-radius: 0px 20px 20px 0px;     
+}
+
+.form-select, input{
+    font-size: 18px; 
+}
+
+.tabela-pokemon{
+    display: inline-block;
+    text-align: center;
+    margin-top: 30px;
+   
+}
+.card-pokemon{
+    border: 2.5px solid white;   
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px 2px black;
+}
+
+.img-pokemon{
+    height: 140px;      
+}
+
+.btn-pokemon {
+    display: block;  
+    background-color:rgba(250, 93, 93,0.801);    
+    border-radius: 20px;
+    margin-left: 13px;
+    padding: 5px 20px;   
+   
+}
+
+.btn-pokemon:hover{
+    background-color:rgba(236, 41, 41, 0.801);
+    
+}
+
+@media screen and (max-width: 767px){
+    .col-sm-12{
+        padding: 0px 80px;
+        margin-top: 1.5px;              
+    }
+    .form-select{
+        border-radius: 0px 0px 20px 20px; 
+    }
+    input{
+        border-radius: 20px 20px 0px 0px; 
+    }     
+
+    .col-sm-6{
+        margin-left: 20px;
+    }
 }

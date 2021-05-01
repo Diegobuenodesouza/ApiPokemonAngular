@@ -2,7 +2,8 @@
     <img class="logo" src="../assets/pokeapi.png" alt="">
 </div>
 
-<div class="container">
+<div class="container" >
+
     <div class="row">
         <div class="col-md-2 "></div>
         <div class=" col-md-4 col-sm-12">
@@ -16,4 +17,19 @@
         </div>
         <div class="col-md-2 "></div>
     </div>
+    
+    <div *ngFor="let pokemon of listaPokemon; let i=index" class="col-lg-3  col-md-4 col-sm-6 tabela-pokemon">
+  
+            <div class="card-pokemon">                
+                <img [src]="listaPokemon[i]['sprites']['front_default']" class="img-pokemon">  
+                <button class="btn btn-pokemon" >{{ listaPokemon[i]['name'] | primeiraMaiuscula }}</button>
+            </div>
+
+    </div>    
+    
+    
+    
+    
 </div>
+
+
