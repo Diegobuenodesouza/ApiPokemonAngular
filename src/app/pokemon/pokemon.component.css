@@ -28,15 +28,26 @@ input{
 
 }
 
-
-.img-pokemon{
-    height: 140px;      
+.dropdown-content{
+    max-height: 100px;
 }
 
 
+.img-pokemon{
+    height: 140px;   
+    transition: 0.4s;   
+}
 
+.img-pokemon:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);     
 
+}
 
+.font-option{
+    font-size: 14px;
+    font-weight: 700;
+}
 @media screen and (max-width: 767px){
     .col-sm-12{
         padding: 0px 80px;

@@ -7,11 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class ApiPokemonService {
   
-  URL_POKEMON = "https://pokeapi.co/api/v2/pokemon";
+  private URL_POKEMON = "https://pokeapi.co/api/v2/pokemon";
+  private URL_POKEMON_TYPE ='https://pokeapi.co/api/v2/type/';
 
   constructor(private http : HttpClient) { }
 
-  getAllPokemon(): Observable<any> {
+  getLimitPokemon(): Observable<any> {
     return  this.http.get(`${this.URL_POKEMON}?limit=50`)
   }
 
@@ -19,5 +20,12 @@ export class ApiPokemonService {
     return this.http.get(`${this.URL_POKEMON}/${nome}`)
   }  
 
+  getType(): Observable<any>{
+    return this.http.get(this.URL_POKEMON_TYPE)
+  }
+
+  getAllPokemon(type : string): Observable<any> {    
+     return this.http.get(`${this.URL_POKEMON}?limit=250`)
+  }
   
 }
