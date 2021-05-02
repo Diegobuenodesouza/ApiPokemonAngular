@@ -14,33 +14,80 @@ h1{
 
 }
 
-label , .type{
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    color: white;
-    font-size: 18px;
-    margin-right: 10px;
+.margin-type{
+    margin: 4px 0px 0px 50px;
 }
+
 
 .type{
     display: inline;
     padding: 2px 5px;
     border-radius: 10px;
     margin: 3px;
-    color: white;
-
+    color:black;
+    font-size: 16px;
+    
 }
+
+
+label{
+    font-size: 22px;    
+    color: rgb(217, 221, 226);
+}
+
+
+label , .type{
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    margin-right: 10px;
+    
+}
+
+
+
+
+
+label , h1{
+    text-shadow: 3px 1px black;
+}
+
+h2{
+  
+    text-align: center;
+}
+
+
+.label-rigth , h2{
+    color: black;
+    text-shadow: 3px 1px white; 
+}
+
+.label-rigth{
+    font-size: 17px;
+}
+
+
+
+.tabela{
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+
 
 
 /* TIPOS */
 .poison{
     background-color: rgb(186, 243, 112);
 }
-.fire{
-    background-color: rgb(250, 52, 52);
-}
 .grass{
     background-color: rgb(146, 190, 88);
+}
+.bug{
+    background-color: rgb(158, 248, 41);
+}
+.fire{
+    background-color: rgb(250, 52, 52);
 }
 .water{
     background-color: rgb(118, 186, 250);
@@ -51,8 +98,6 @@ label , .type{
 .animation{    
     text-align: center;  
 }
-
-
 
 .gif-animation{
     margin: 50px;
@@ -75,6 +120,31 @@ label , .type{
     margin-top: -70px;
     margin-left: 60px;
     position: relative;
-    z-index: -1;
+    z-index: -1;  
+}
+
+.col-sm-12{
+    margin-top: 10px;
+}
+
+.btn-pokemon{
+    margin-top: 0px;
+    width:  150px;
+}
+
+@media screen and (max-width: 991px  ) {
+   
+    .margin-left{
+        padding-left: 38%;
+        margin-top: -40px;
+    }
+    .btn-pokemon{
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+    .label-rigth , h2{
+        color: white;
+        text-shadow: 3px 1px black; 
+    }
   
 }

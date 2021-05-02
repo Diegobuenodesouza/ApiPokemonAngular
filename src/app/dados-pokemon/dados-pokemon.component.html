@@ -7,43 +7,39 @@
     
     <div class="row" >
         
-        
-        
-        <div class="col-lg-3"> 
+        <div class="col-lg-2  col-md-12 col-sm-12 margin-left"> 
             <div class="row">
                 <label for="">ID: #{{ retornoId(pokemon['forms'][0]['url']) }} </label>
             </div>  
             
             <div class="row">
-                <label for="">Height: {{ pokemon['height']/10 }}0m</label>
+                <label for="">Height: {{ pokemon['height']/10 }}m</label>
             </div>           
             
             <div class="row">
                 <label for="">Weight: {{ pokemon['weight'] }}kg </label>
-            </div>           
-            
+            </div>          
             
             <div class="row">
                 <div class="col-lg-12">
                     <label >Type: </label> 
-                    <div *ngFor="let type of pokemon['types']; let i=index"  style="display: inline;">                       
+                    <div *ngFor="let type of pokemon['types']; let i=index" class="margin-type"  >                       
                         <p  class="type"
                         [ngClass]="{
                             'poison': pokemon['types'][i]['type']['name'] == 'poison',
                             'fire': pokemon['types'][i]['type']['name'] == 'fire',
                             'grass': pokemon['types'][i]['type']['name'] == 'grass',
-                            'water': pokemon['types'][i]['type']['name'] == 'water'
+                            'water': pokemon['types'][i]['type']['name'] == 'water',
+                            'bug': pokemon['types'][i]['type']['name'] == 'bug'
                         }"                       
                         > {{ pokemon['types'][i]['type']['name'] | primeiraMaiuscula }}</p>   
                     </div>  
                 </div>                
-            </div>            
-            
-            
+            </div>  
         </div>
         
         
-        <div class="col-lg-6 animation " > 
+        <div class="col-lg-6   col-sm-12 animation  " > 
             <div class="row">
                 <div class="col-6">
                     <img class="gif-animation" [src]="pokemon['sprites']['versions']['generation-v']['black-white']['animated']['front_default']" alt="animation-pokemon">
@@ -57,7 +53,43 @@
         </div>
         
         
-        <div class="col-lg-3"> //TODO Mais dados </div>
-    </div>
+        <div class="col-lg-4    col-sm-12" > 
+            <h2>Stats</h2>
+            <label class="label-rigth">HP</label>
+            <div class="progress">                
+                <div class="progress-bar progress-bar-striped bg-success  "  [ngStyle]="{'width': getStats(hp) /2 + '%'}" role="progressbar"  aria-valuenow="10" aria-valuemin="0" #termo aria-valuetext="100" aria-valuemax="200" > {{  pokemon['stats'][0]['base_stat'] }} </div>                
+            </div>
+
+            <label class="label-rigth">Attack</label>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-danger  "  [ngStyle]="{'width': getStats(attack) /2 + '%'}"  role="progressbar"  aria-valuenow="10" aria-valuemin="0" aria-valuetext="100" aria-valuemax="200"> {{ pokemon['stats'][1]['base_stat'] }}</div>                
+            </div>
+
+            <label class="label-rigth">Defense</label>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped "  [ngStyle]="{'width': getStats(defense) /2 + '%'}"  role="progressbar"  aria-valuenow="10" aria-valuemin="0" aria-valuetext="100" aria-valuemax="200">  {{ pokemon['stats'][2]['base_stat'] }} </div>                
+            </div>
+
+            <label class="label-rigth">Special Attack</label>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-danger "   [ngStyle]="{'width': getStats(especialAttack) /2 + '%' }" role="progressbar"  aria-valuenow="10" aria-valuemin="0" aria-valuetext="100" aria-valuemax="200"> {{ pokemon['stats'][3]['base_stat'] }} </div>                
+            </div>
+
+            <label class="label-rigth">Special Defense</label>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped  "  [ngStyle]="{'width': getStats(especialDefense) /2 + '%' }" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuetext="100" aria-valuemax="200"> {{ pokemon['stats'][4]['base_stat'] }} </div>                
+            </div>
+
+            <label class="label-rigth ">Speed</label>
+            <div class="progress ">
+                <div class="progress-bar progress-bar-striped bg-warning  "  role="progressbar" [ngStyle]="{'width': getStats(speed) /2 + '%' }" aria-valuenow="10" aria-valuemin="0" aria-valuetext="100" aria-valuemax="200"> {{ pokemon['stats'][5]['base_stat'] }}</div>                
+            </div>
+
+        </div>
+    </div>   
     
+    <div class="d-flex justify-content-center" >
+        <button class="btn btn-pokemon btn-lg" [routerLink]="['/']"  > Voltar </button>
+    </div>
 </div>
+
