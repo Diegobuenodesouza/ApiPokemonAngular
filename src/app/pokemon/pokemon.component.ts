@@ -41,6 +41,7 @@ export class PokemonComponent implements OnInit {
   listarLimite100(): void{
     this.pokemonService.getLimitPokemon().subscribe(
       (res) => {
+        
         res.results.forEach((element : any) => {
           this.pokemonService.getNamePokemon(element['name']).subscribe(
             (resposta : any) => this.listaPokemon.push(resposta))

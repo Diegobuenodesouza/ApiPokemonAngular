@@ -76,24 +76,6 @@ h2{
 
 
 
-/* TIPOS */
-.poison{
-    background-color: rgb(186, 243, 112);
-}
-.grass{
-    background-color: rgb(146, 190, 88);
-}
-.bug{
-    background-color: rgb(158, 248, 41);
-}
-.fire{
-    background-color: rgb(250, 52, 52);
-}
-.water{
-    background-color: rgb(118, 186, 250);
-}
-
-/* FIM DE TIPOS */
 
 .animation{    
     text-align: center;  

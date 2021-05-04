@@ -23,7 +23,7 @@ input{
 
 .tabela-pokemon{
     display: inline-block;
-    text-align: center;
+    text-align: center; 
     margin-top: 30px;
 
 }
@@ -39,8 +39,8 @@ input{
 }
 
 .img-pokemon:hover {
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);     
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);     
 
 }
 
